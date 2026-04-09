@@ -157,6 +157,62 @@
     .project-card .proj-date { font-size: 0.75rem; color: var(--muted); }
     .project-card p { font-size: 0.87rem; color: var(--muted); flex: 1; }
 
+    /* =====================================================
+       MEDIA BLOCK — works inside .card and .project-card
+       ===================================================== */
+
+    /* Wrapper for all media types */
+    .media {
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* IMAGE — paste <img> inside .media */
+    .media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 320px;
+    }
+
+    /* VIDEO FILE — paste <video> inside .media */
+    .media video {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 320px;
+      background: #000;
+    }
+
+    /* YOUTUBE / IFRAME EMBED — paste <iframe> inside .media */
+    /* Keeps 16:9 ratio */
+    .media-video {
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+    }
+    .media-video iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* Optional caption under media */
+    .media-caption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      text-align: center;
+    }
+
     /* SKILLS */
     #skills { border-bottom: 1px solid var(--border); }
     .skills-group { margin-bottom: 2rem; }
@@ -209,6 +265,7 @@
         <p>Robotics & Embedded Systems Engineer focused on LiDAR perception, ROS/ROS2, and bridging hardware with intelligent control systems.</p>
         <div class="hero-links">
           <a href="mailto:rafly.daffaldi@gmail.com" class="btn btn-primary">Get in Touch</a>
+          <a href="resume.pdf" download class="btn btn-ghost">Download Resume</a>
           <a href="https://github.com/idabble31" target="_blank" class="btn btn-ghost">GitHub</a>
           <a href="https://www.linkedin.com/in/rdaffaldi" target="_blank" class="btn btn-ghost">LinkedIn</a>
         </div>
@@ -253,6 +310,35 @@
             <li>Built an automated truck classification algorithm to minimize human error in volume calculations.</li>
             <li>Created a CPD-based point cloud alignment system, boosting merge success rates by ~15%.</li>
           </ul>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS CARD ═══════════════════════════════
+
+            OPTION 1 — Image (URL or local file path):
+              <div class="media">
+                <img src="https://example.com/your-image.jpg" alt="Widya Robotics demo" />
+              </div>
+              <p class="media-caption">Optional caption text</p>
+
+            OPTION 2 — YouTube video (replace VIDEO_ID with the YouTube video ID):
+              <div class="media-video">
+                <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+              </div>
+              <p class="media-caption">Optional caption text</p>
+
+            OPTION 3 — Local video file (put the .mp4 in the same folder as index.html):
+              <div class="media">
+                <video src="widya-demo.mp4" controls></video>
+              </div>
+              <p class="media-caption">Optional caption text</p>
+
+            OPTION 4 — Google Drive video (FILE_ID is the long string in your Drive share link):
+              <div class="media-video">
+                <iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe>
+              </div>
+              <p class="media-caption">Optional caption text</p>
+
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
         <div class="card">
@@ -265,6 +351,18 @@
             <li>Implemented a multi-agent R3Live++ configuration for synchronized SLAM across multiple sensors.</li>
             <li>Developed a robust backend data saver for high-throughput sensor serialization and data integrity.</li>
           </ul>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS CARD ═══════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
         <div class="card">
@@ -278,6 +376,18 @@
             <li>Developed a custom PCB with Bluetooth + CAN Bus for the PicoBot rehabilitation robot, including firmware and control algorithms.</li>
             <li>Designed and implemented a Motion Capture System for gait analysis research.</li>
           </ul>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS CARD ═══════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
         <div class="card">
@@ -291,6 +401,18 @@
             <li>Developed a script for generating patient gait performance reports.</li>
             <li>Designed motion capture systems for Dyson's 360 Vis Nav robot testing lab.</li>
           </ul>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS CARD ═══════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
       </div>
@@ -309,6 +431,18 @@
           <h3>Logistic Robot Fleet</h3>
           <div class="proj-date">Aug 2023 – Mar 2024</div>
           <p>Autonomous robot system for logistics — designed the AMR hardware platform and implemented a full ROS navigation stack with mapping, localization, and path planning (A*, Dijkstra, RRT).</p>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS PROJECT ════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
         <div class="project-card">
@@ -316,6 +450,20 @@
           <h3>Autonomous Tractor</h3>
           <div class="proj-date">May 2022 – Apr 2023</div>
           <p>Autonomized a two-wheeled hand tractor for farming — embedded control hardware and firmware with real-time control loops, remote operation, and safety fail-safes.</p>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS PROJECT ════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
+          <div class="media-video"><iframe src="https://www.youtube.com/embed/g1iaPkFP0VY" allowfullscreen></iframe></div>
+
         </div>
 
         <div class="project-card">
@@ -323,6 +471,18 @@
           <h3>IoT Homecare Monitor</h3>
           <div class="proj-date">Oct 2020 – Mar 2021</div>
           <p>Portable health monitoring system for remote post-stroke patient tracking — IoT prototype with decision tree firmware for real-time health data and connectivity.</p>
+          <!--
+            ═══ HOW TO ADD MEDIA TO THIS PROJECT ════════════════════════════
+            OPTION 1 — Image:
+              <div class="media"><img src="YOUR_IMAGE_URL" alt="description" /></div>
+            OPTION 2 — YouTube:
+              <div class="media-video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe></div>
+            OPTION 3 — Local video:
+              <div class="media"><video src="YOUR_VIDEO.mp4" controls></video></div>
+            OPTION 4 — Google Drive video:
+              <div class="media-video"><iframe src="https://drive.google.com/file/d/FILE_ID/preview" allowfullscreen></iframe></div>
+            ═════════════════════════════════════════════════════════════════
+          -->
         </div>
 
       </div>
