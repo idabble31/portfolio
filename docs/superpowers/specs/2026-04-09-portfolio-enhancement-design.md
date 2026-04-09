@@ -68,6 +68,20 @@ The following existing cards have media comment placeholders. They will remain a
 
 ---
 
+## 6. New Project Card — PicoBot Rehabilitation Robot
+
+**Position:** Added to the projects section (alongside existing project cards).
+
+**Content:**
+- Icon: 🦿
+- Title: PicoBot Rehabilitation Robot
+- Date: Aug 2023 – Sep 2024
+- Role: Embedded Systems Engineer · PT. Summit Vision Nusantara
+- Description: A rehabilitation robot designed to help post-stroke patients regain lower-limb mobility by guiding feet through controlled, natural walking movements. Uses a BLDC motor near the ankle for foot actuation. Patients connect via Bluetooth to a custom mobile app to select training modes (basic, walking, or advanced) tailored to their recovery stage.
+- Media: Image(s) + video embed (user to provide files/links)
+
+---
+
 ## Out of Scope
 
 - No new sections or nav items
