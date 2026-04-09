@@ -212,6 +212,46 @@
       text-align: center;
     }
 
+    /* MEDIA SLIDER */
+    .slider { margin-top: 1rem; }
+    .slide { display: none; }
+    .slide.active { display: block; }
+    .slide .media,
+    .slide .media-video { margin-top: 0; }
+    .slider-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.6rem;
+      padding: 0 0.2rem;
+    }
+    .slider-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .slider-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .slider-dots { display: flex; gap: 6px; align-items: center; }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dot.active { background: var(--accent); }
+
     /* SKILLS */
     #skills { border-bottom: 1px solid var(--border); }
     .skills-group { margin-bottom: 2rem; }
@@ -323,12 +363,19 @@
             <li>Developed a robust backend data saver for high-throughput sensor serialization and data integrity.</li>
             <li>Implementing a full SLAM pipeline using the FAST-LIVO2 algorithm — covering LiDAR-camera-IMU sensor calibration, core SLAM mechanism, and a live monitoring dashboard.</li>
           </ul>
-          <div class="media-video">
-            <iframe 
-              src="https://drive.google.com/file/d/1i984ekIIjqUFBmbB2rqu07y5ALx6w-9X/preview"
-              allow="autoplay"
-              allowfullscreen>
-            </iframe>
+          <div class="slider">
+            <div class="slider-track">
+              <div class="slide active">
+                <div class="media-video">
+                  <iframe src="https://drive.google.com/file/d/1i984ekIIjqUFBmbB2rqu07y5ALx6w-9X/preview" allow="autoplay" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button class="slider-btn slider-prev">&#8249;</button>
+              <div class="slider-dots"><span class="dot active"></span></div>
+              <button class="slider-btn slider-next">&#8250;</button>
+            </div>
           </div>
         </div>
 
@@ -374,20 +421,31 @@
           <h3>PicoBot Rehabilitation Robot</h3>
           <div class="proj-date">Aug 2023 – Sep 2024 · Embedded Systems Engineer</div>
           <p>A rehabilitation robot designed to help post-stroke patients regain lower-limb mobility by guiding feet through controlled, natural walking movements. Uses a BLDC motor near the ankle for foot actuation. Patients connect via Bluetooth to a custom mobile app to select training modes (basic, walking, or advanced) tailored to their recovery stage.</p>
-          <div class="media"><img src="picobot.png" alt="PicoBot Rehabilitation Robot" /></div>
-          <div class="media-video">
-            <iframe 
-              src="https://drive.google.com/file/d/17ch0AEyqNOU-EfXvQ1ooRk2GInqdb-qd/preview"
-              allow="autoplay"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="media-video">
-            <iframe 
-              src="https://drive.google.com/file/d/1uZjzn5riqlwDEAbeDyx8DScR18Nk8tJY/preview"
-              allow="autoplay"
-              allowfullscreen>
-            </iframe>
+          <div class="slider">
+            <div class="slider-track">
+              <div class="slide active">
+                <div class="media"><img src="picobot.png" alt="PicoBot Rehabilitation Robot" /></div>
+              </div>
+              <div class="slide">
+                <div class="media-video">
+                  <iframe src="https://drive.google.com/file/d/17ch0AEyqNOU-EfXvQ1ooRk2GInqdb-qd/preview" allow="autoplay" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="media-video">
+                  <iframe src="https://drive.google.com/file/d/1uZjzn5riqlwDEAbeDyx8DScR18Nk8tJY/preview" allow="autoplay" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button class="slider-btn slider-prev">&#8249;</button>
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="slider-btn slider-next">&#8250;</button>
+            </div>
           </div>
         </div>
 
@@ -396,8 +454,24 @@
           <h3>Logistic Robot Fleet</h3>
           <div class="proj-date">Aug 2023 – Mar 2024</div>
           <p>Autonomous robot system for logistics — designed the AMR hardware platform and implemented a full ROS navigation stack with mapping, localization, and path planning (A*, Dijkstra, RRT).</p>
-          <div class="media-video"><iframe src="https://www.youtube.com/embed/Hw3pyWnk8Bc" allowfullscreen></iframe></div>
-          <div class="media-video"><iframe src="https://www.youtube.com/embed/cZUXHwWSGLc" allowfullscreen></iframe></div>
+          <div class="slider">
+            <div class="slider-track">
+              <div class="slide active">
+                <div class="media-video"><iframe src="https://www.youtube.com/embed/Hw3pyWnk8Bc" allowfullscreen></iframe></div>
+              </div>
+              <div class="slide">
+                <div class="media-video"><iframe src="https://www.youtube.com/embed/cZUXHwWSGLc" allowfullscreen></iframe></div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button class="slider-btn slider-prev">&#8249;</button>
+              <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="slider-btn slider-next">&#8250;</button>
+            </div>
+          </div>
         </div>
 
         <div class="project-card">
@@ -405,8 +479,18 @@
           <h3>Autonomous Tractor</h3>
           <div class="proj-date">May 2022 – Apr 2023</div>
           <p>Autonomized a two-wheeled hand tractor for farming — embedded control hardware and firmware with real-time control loops, remote operation, and safety fail-safes.</p>
-          <div class="media-video"><iframe src="https://www.youtube.com/embed/g1iaPkFP0VY" allowfullscreen></iframe></div>
-
+          <div class="slider">
+            <div class="slider-track">
+              <div class="slide active">
+                <div class="media-video"><iframe src="https://www.youtube.com/embed/g1iaPkFP0VY" allowfullscreen></iframe></div>
+              </div>
+            </div>
+            <div class="slider-controls">
+              <button class="slider-btn slider-prev">&#8249;</button>
+              <div class="slider-dots"><span class="dot active"></span></div>
+              <button class="slider-btn slider-next">&#8250;</button>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -465,5 +549,34 @@
     <p>Built by Rafly Daffaldi · <a href="mailto:rafly.daffaldi@gmail.com">rafly.daffaldi@gmail.com</a></p>
   </footer>
 
+  <script>
+    document.querySelectorAll('.slider').forEach(function(slider) {
+      var slides = slider.querySelectorAll('.slide');
+      var dots = slider.querySelectorAll('.dot');
+      var prev = slider.querySelector('.slider-prev');
+      var next = slider.querySelector('.slider-next');
+      var controls = slider.querySelector('.slider-controls');
+      var current = 0;
+
+      if (slides.length <= 1) {
+        if (controls) controls.style.display = 'none';
+        return;
+      }
+
+      function goTo(n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      prev.addEventListener('click', function() { goTo(current - 1); });
+      next.addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(dot, i) {
+        dot.addEventListener('click', function() { goTo(i); });
+      });
+    });
+  </script>
 </body>
 </html>
