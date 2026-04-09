@@ -6,7 +6,7 @@
 
 ## Overview
 
-Enhance the existing personal portfolio with media embeds (YouTube / Google Drive), a new FAST-LIVO SLAM project card, product context for the Widya Robotics experience, and a Resume download button. The single-file architecture is preserved.
+Enhance the existing personal portfolio with media embeds (YouTube / Google Drive), FAST-LIVO SLAM work added to the Freelance ROS Developer experience card, product context for the Widya Robotics experience, and a Resume download button. The single-file architecture is preserved.
 
 ---
 
@@ -35,17 +35,14 @@ Enhance the existing personal portfolio with media embeds (YouTube / Google Driv
 
 ---
 
-## 3. New Project Card — FAST-LIVO SLAM Pipeline
+## 3. Freelance ROS Developer (Upwork) Experience Card Enhancement
 
-**Position:** First card in the projects section (most recent work first).
+Add FAST-LIVO SLAM work as additional bullet points under the existing card, then embed the screen recording video below.
 
-**Content:**
-- Icon: 🗺️
-- Title: FAST-LIVO SLAM Pipeline
-- Date: Jan 2026 – Present
-- Role line: Remote ROS Developer · Upwork
-- Description: Full SLAM pipeline implementation using the FAST-LIVO2 algorithm — covering sensor calibration (LiDAR-camera-IMU), the core SLAM mechanism, and a live monitoring dashboard.
-- Media: Screen recording video (user to provide YouTube or Google Drive link)
+**New bullet points to add:**
+- Implementing a full SLAM pipeline using the FAST-LIVO2 algorithm, covering LiDAR-camera-IMU sensor calibration, core SLAM mechanism, and a live monitoring dashboard.
+
+**Media:** Screen recording video embed below the bullet list (user to provide YouTube or Google Drive link).
 
 ---
 
@@ -62,7 +59,7 @@ Enhance the existing personal portfolio with media embeds (YouTube / Google Driv
 ## 5. Remaining Media Slots
 
 The following existing cards have media comment placeholders. They will remain as comments until the user provides links:
-- Freelance ROS Developer (Upwork) card
+- Freelance ROS Developer (Upwork) card — video slot filled with FAST-LIVO screen recording (user to provide link)
 - R&D Engineer — PT. Summit Vision Nusantara card
 - Motion Engineer — Summit Features Sdn Bhd card
 - Logistic Robot Fleet project card
